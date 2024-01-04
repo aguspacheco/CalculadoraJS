@@ -12,7 +12,7 @@ body {
 }
 
 .calculadora {
-  background-color: #020202;
+  background-color: #280f52c2;
   color: white;
   width: 350px;
   max-width: 100%;
@@ -25,18 +25,16 @@ body {
 
 .pantalla {
   grid-column: 1/-1;
-  background-color: cadetblue;
-  padding: 1, 5rem;
-  font-size: 2, 5rem;
+  background-color: #7da0a1;
+  padding: 5%;
   text-align: center;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  border-radius: 5rem;
+  margin-bottom: 2rem;
   font-family: monospace;
-  font-weight: 600;
 }
 
 .btn {
-  background-color: cadetblue;
+  background-color: #713eb4;
   color: white;
   padding: 1.5rem 0.5rem;
   display: flex;
@@ -47,7 +45,7 @@ body {
 }
 
 .btn :hover {
-  background-color: cyan;
+  background-color: #8c00ff;
 }
 
 #cero {
