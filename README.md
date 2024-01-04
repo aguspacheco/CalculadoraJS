@@ -1,2 +1,2 @@
 # CalculadoraJS
-Calcualdora realizada con JavaSript, HTML y CSS
+Calculadora realizada con JavaSript, HTML y CSS
