@@ -1,2 +1,1 @@
-# CalculadoraJS
-Calculadora realizada con JavaSript, HTML y CSS
+# Simulador de calculo de tasas 2025

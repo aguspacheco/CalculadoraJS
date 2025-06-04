@@ -1,34 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CALCULADORA JS 📈</title>
-    <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <div class="calculadora">
-      <div class="pantalla">0</div>
-      <button id="c" class="btn">C</button>
-      <button id="borrar" class="btn"><--</button>
-      <button id="dividir" class="btn">/</button>
-      <button class="btn">*</button>
-      <button class="btn">7</button>
-      <button class="btn">8</button>
-      <button class="btn">9</button>
-      <button class="btn">-</button>
-      <button class="btn">4</button>
-      <button class="btn">5</button>
-      <button class="btn">6</button>
-      <button class="btn">+</button>
-      <button class="btn">1</button>
-      <button class="btn">2</button>
-      <button class="btn">3</button>
-      <button id="igual" class="btn">=</button>
-      <button id="cero" class="btn">0</button>
-      <button class="btn">.</button>
+<section class="mensura">
+  <form class="formulario" id="formularioMensura">
+    <div class="elemento">
+      <label for="origen">Cantidad Parcela/s Origen *</label>
+      <input type="number" id="origen" min="0" required />
     </div>
 
-    <script src="/calculador/main.js"></script>
-  </body>
-</html>
+    <div class="elemento">
+      <label for="resultante">Cantidad Parcela/s Resultante/s *</label>
+      <input type="number" id="resultante" min="0" required />
+    </div>
+
+    <div class="elemento">
+      <label for="ufuncional">Cantidad Unidad/es Funcional/es y/o Unidades Complementarias</label>
+      <input type="number" id="ufuncional" min="0" required />
+    </div>
+
+    <div class="elemento">
+      <label for="ddjjMensura">Declaración jurada</label>
+      <input type="number" id="ddjjMensura" min="0" />
+    </div>
+
+    <div class="elemento">
+      <label for="preferencial">Preferencial</label>
+      <input type="checkbox" id="preferencial" />
+    </div>
+  </form>
+
+  <div class="resultados-tabla" id="resultadosMensura-tabla">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Cantidad</th>
+          <th>Valor</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody class="resultadosMensura" id="resultadosMensura"></tbody>
+    </table>
+
+    <div class="total">
+      <label for="abonarMensura">Total Abonar:</label>
+      <div id="abonarMensura"></div>
+    </div>
+  </div>
+
+  <div class="botones">
+    <button type="button" class="btn" id="calcularMensura-btn">Calcular</button>
+    <button type="button" class="btn" id="limpiarMensura-btn">Borrar</button>
+    <button type="button" class="btn recalcular" id="recalcularMensura-btn">VOLVER</button>
+  </div>
+</section>
+
+<img
+  src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"
+/>
+
+<section class="valuaciones">
+  <form class="formulario" id="formularioValuaciones">
+    <div class="elemento">
+      <label for="ddjjValuacion">Declaración Jurada</label>
+      <input type="number" min="0" id="ddjjValuacion" />
+    </div>
+
+    <div class="elemento">
+      <label for="valorFiscal">Certficación de valores fiscales de inmuebles</label>
+      <input type="number" min="0" id="valorFiscal" required />
+    </div>
+
+    <div class="elemento">
+      <label for="valuacionFiscal">Pedido de reconsideración de valuación fiscal</label>
+      <input type="number" min="0" id="valuacionFiscal" required />
+    </div>
+
+    <div class="elemento">
+      <label for="ganadera">Pedido de reconsideracion de receptividad ganadera</label>
+      <input type="number" min="0" id="ganadera" required />
+    </div>
+
+    <div class="elemento">
+      <label for="vir">Pedido de reconsideración de VIR</label>
+      <input type="number" min="0" id="vir" required />
+    </div>
+
+    <div class="elemento">
+      <label for="preferencialValuacion">Preferencial</label>
+      <input type="checkbox" id="preferencialValuacion" required />
+    </div>
+  </form>
+
+  <div class="resultadosValuaciones-tabla" id="resultadosValuaciones-tabla">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Cantidad</th>
+          <th>Valor</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="resultadosValuaciones"></tbody>
+    </table>
+    <div class="total">
+      <label for="abonarValuacion">Total Abonar:</label>
+      <div id="abonarValuacion"></div>
+    </div>
+  </div>
+
+  <div class="botones">
+    <button type="button" id="calcularValuacion-btn" class="btn">Calcular</button>
+    <button type="button" id="limpiarValuacion-btn" class="btn">Borrar</button>
+    <button type="button" class="btn recalcular" id="recalcularValuacion-btn">VOLVER</button>
+  </div>
+</section>

@@ -1,63 +1,145 @@
-body {
-  min-height: 100vh;
-  background: linear-gradient(45deg, #6c757d, #343a40);
+.mensura,
+valuaciones {
+  height: 260px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.calculadora {
-  background-color: #280f52c2;
-  color: white;
-  width: 350px;
-  max-width: 100%;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-}
-
-.pantalla {
-  grid-column: 1/-1;
-  background-color: #7da0a1;
-  padding: 5%;
-  text-align: center;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  font-family: monospace;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .btn {
-  background-color: #713eb4;
-  color: white;
-  padding: 1.5rem 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 1s ease;
+  background-color: #0096c7;
+  border: 2px solid #0077b6;
+  border-radius: 0.5rem;
+  color: white;
 }
 
 .btn:hover {
-  background-color: #9c89b8;
+  transform: translate(0, -6px);
+  box-shadow: 0.5rem, 0.5rem, 1rem #fff, -0.5 1rem #ccc;
 }
 
-#igual {
-  grid-row: span 2;
-  background-color: #f03636c0;
+button :active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #fff, inset -0.2rem 1rem #ccc;
 }
 
-#igual:hover {
-  background-color: #f08080;
+.botones {
+  display: flex;
+  width: 110px;
+  padding-top: 10px;
 }
 
-#cero {
-  grid-column: span 2;
+.botones button {
+  margin-right: 5px;
+  color: #ffffff;
 }
 
-#igual:hover {
-  background-color: #f03636;
+::selection {
+  background-color: #df6a0b;
+}
+
+.recalcular {
+  display: none;
+}
+
+.elemento {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.elemento input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.btn#limpiarMensura-btn {
+  background-color: #e63946;
+  border-color: #d90429;
+}
+
+.btn#recalcularMensura-btn {
+  background-color: #fcbf49;
+  border-color: #fca311;
+}
+
+.btn#limpiarValuacion-btn {
+  background-color: #e63946;
+  border-color: #d90429;
+}
+
+.btn#recalcularValuacion-btn {
+  background-color: #fcbf49;
+  border-color: #fca311;
+}
+
+label {
+  display: inline-block;
+  width: 350px;
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+input[type="number"] {
+  padding-left: 10px;
+  color: #555;
+}
+
+.total {
+  display: flex;
+  justify-content: space-around;
+  background-color: #dddddde7;
+  margin-bottom: 5px;
+  padding: 7px;
+}
+
+td {
+  text-align: center;
+}
+
+table {
+  background-color: #e8eae9;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px 1px #0000004d;
+  width: 100%;
+}
+
+thead {
+  background-color: #dddddde7;
+  border-bottom: solid 4px;
+  color: #2b3d4f;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #beb9b6;
+}
+tr:hover {
+  background-color: #ff8000;
+}
+td {
+  font-family: "calibri";
+  text-align: center;
+}
+
+.resultados-tabla {
+  display: none;
+}
+
+.resultadosValuaciones-tabla {
+  display: none;
+}
+
+.texto-izquierda {
+  text-align: left;
 }
